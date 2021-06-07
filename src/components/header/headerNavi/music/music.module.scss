@@ -1,0 +1,15 @@
+.music {
+  width: 7%;
+  height: 90%;
+  background: url(./note-128.png) no-repeat top center;
+  background-size: 55%;
+  cursor: pointer;
+
+  .musicText {
+    margin-top: 29px;
+    margin-left: 5px;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+}

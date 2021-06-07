@@ -1,0 +1,78 @@
+.newsText {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .titleoftext {
+    width: 100%;
+    height: 80px;
+
+    .titleoftextSphere {
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      font-weight: bolder;
+      padding: 5px;
+
+      @media screen and(max-width:1500px) {
+        font-size: 1.1em;
+      }
+    }
+
+    .titleoftextButton {
+      padding: 5px;
+      width: 220px;
+      height: 50px;
+      display: flex;
+
+      .pt {
+        font-size: 1em;
+        margin-left: 20px;
+        letter-spacing: 1px;
+      }
+
+      .btn {
+        border: none;
+        background-color: rgb(66, 66, 252);
+        color: blanchedalmond;
+        width: 110px;
+        height: 25px;
+        font-weight: bolder;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .mainText {
+    width: 100%;
+    height: 158px;
+
+    .mainTextmidle {
+      padding: 7px;
+      font-size: 1.1em;
+
+      @media screen and(max-width:1500px) {
+        line-height: 16px;
+      }
+
+      span {
+        margin-left: 30px;
+      }
+    }
+
+    .showMore {
+        margin-left: 20px;
+        color: brown;
+        font-weight: bolder;
+    }
+
+  }
+
+  .addition {
+    width: 100%;
+    height: 60px;
+    display: flex;
+  }
+}

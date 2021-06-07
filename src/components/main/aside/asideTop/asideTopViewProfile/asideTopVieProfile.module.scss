@@ -1,0 +1,17 @@
+.asideTopVieProfile {
+    font-size: 0.9em;
+    color: rgb(230, 67, 67);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    padding-top: 40px;
+    cursor: pointer;
+
+    @media screen and(max-width: 1500px) {
+        font-size: 0.8em;
+        height: 65px;
+        padding-top: 30px;
+    }
+}

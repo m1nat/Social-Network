@@ -1,0 +1,14 @@
+.notification {
+    width: 7%;
+    height: 90%;
+    background: url(./bell-2-128.png) no-repeat top center;
+    background-size: 58%;
+    cursor: pointer;
+  
+    .notificationText {
+      margin-top: 30px;
+      color: white;
+      font-size: 0.8em;
+      cursor: pointer;
+    }
+  }

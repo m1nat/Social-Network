@@ -1,0 +1,14 @@
+.avatar {
+    width: 17%;
+    height: 89%;
+    border: 3px solid white;
+    border-radius: 30px;
+    background: url(./JYQp8A-xAJY.jpg) no-repeat, center, center;
+    background-size: cover;
+    cursor: pointer;
+
+    @media  screen and (max-width: 1500px) {
+        width: 19%;
+        height: 73%; 
+    }
+}

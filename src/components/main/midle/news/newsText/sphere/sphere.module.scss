@@ -1,0 +1,16 @@
+.sphere {
+    height: 70%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    .btn {
+        border: none;
+        background-color: rgb(228, 223, 223);
+        color:rgb(136, 133, 133) ;
+        height: 30px;
+        border-radius: 3px;
+        margin-left: 10px;
+        font-weight: bolder;
+    }
+}

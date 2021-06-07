@@ -1,0 +1,20 @@
+.messege {
+  width: 7%;
+  height: 90%;
+  background: url(./chat-4-128.png) no-repeat top center;
+  background-size: 55%;
+  cursor: pointer;
+
+  .messegeText {
+    margin-top: 29px;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+  }
+};

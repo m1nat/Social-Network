@@ -1,0 +1,15 @@
+.video {
+  width: 7%;
+  height: 90%;
+  background: url(./video-call-128.png) no-repeat top center;
+  background-size: 58%;
+  cursor: pointer;
+
+  .videoText {
+    margin-top: 29px;
+    margin-left: 5px;
+    color: white;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+}
