@@ -10,7 +10,14 @@ const Midle = props => {
     <div className={s.midle}>
       <HeaderOfMidle />
       <div className={s.routeMessege}>
-        <Route path="/dialogs" render={() => <Dialogs dialogsData={props.state} messeges={props.state}/>} />
+        <Route path="/dialogs" render={() => 
+        <Dialogs
+          dialog={props.dialog}
+          messeges={props.messeges}
+          postMessege={props.postMessege}
+          newMessege={props.newMessege} 
+          getCurrentTextMessege={props.getCurrentTextMessege}/>} 
+        />
         <Route path="/news" render={() => <News />} />
       </div>
       <TopUser />

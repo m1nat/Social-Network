@@ -7,8 +7,8 @@ import s from './main.module.scss';
 const Main = props => {
     return (
         <div className={s.main}>
-            <Aside SuggestionUsers={props.state}/>
-            <Midle   dialogsData={props.state} messeges={props.state}/>
+            <Aside users={props.users} />
+            <Midle dialog={props.dialog} messeges={props.messeges} postMessege={props.postMessege} newMessege={props.newMessege} getCurrentTextMessege={props.getCurrentTextMessege}/>
             <NavBar />
         </div>
     )

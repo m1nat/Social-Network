@@ -1,0 +1,22 @@
+.wrappperAsk {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5px;
+
+  .ask {
+    width: auto;
+    height: 20px;
+    background-color: rgb(172, 165, 165);
+    margin-top: 5px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: blanchedalmond;
+    text-align: end;
+    font-weight: bolder;
+    margin-right: 10px;
+    padding: 2px;
+  }
+}

@@ -6,7 +6,7 @@ const Aside = props => {
     return(
         <div className={s.aside}>
             <AsideTop />
-            <AsideBottom SuggestionUsers={props.state}/>
+            <AsideBottom users={props.users}/>
         </div>
     )
 };
