@@ -1,6 +1,6 @@
 import DialogItem from "./dialogItem/dialogItem";
 import Ask from './ask/ask.jsx';
-import state, { getCurrentTextMessege } from '../../../../redux/State.js';
+import store from '../../../../redux/State.js';
 import Messege from "./messege/messege";
 import s from "./dialogs.module.scss";
 import React from "react";
@@ -15,7 +15,7 @@ const Dialogs = props => {
     <Messege name={el.messege} id={el.id} />
   ));
 
-  let postAsk = state.ask.map(el => (
+  let postAsk = store._state.ask.map(el => (
     <Ask ask={el.messege} />
   ));
 
@@ -27,7 +27,7 @@ const Dialogs = props => {
 
   const putOnchange = () => {
     let text = inputValue.current.value;
-    props.getCurrentTextMessege(text)
+    props.getCurrentTextMessege(text);
   }
 
   return (
