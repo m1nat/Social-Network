@@ -14,9 +14,10 @@ const Midle = props => {
         <Dialogs
           dialog={props.dialog}
           messeges={props.messeges}
-          postMessege={props.postMessege}
           newMessege={props.newMessege} 
-          getCurrentTextMessege={props.getCurrentTextMessege}/>} 
+          dispatch = { props.dispatch }
+          ask={ props.ask }
+          />} 
         />
         <Route path="/news" render={() => <News />} />
       </div>

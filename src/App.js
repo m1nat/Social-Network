@@ -8,12 +8,12 @@ const App = props => {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Main dialog={props.state.dialog}
-          messeges={props.state.messeges}
-          users={props.state.users}
-          postMessege={props.postMessege}
-          newMessege = {props.state.newMessege}
-          getCurrentTextMessege={props.getCurrentTextMessege}
+        <Main dialog={ props.state.dialog }
+          messeges={ props.state.messeges }
+          users={ props.state.users }
+          dispatch = { props.dispatch }
+          newMessege={ props.state.newMessege }
+          ask={ props.state.ask }
         />
       </div>
     </BrowserRouter>

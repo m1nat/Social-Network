@@ -1,3 +1,6 @@
+const POST_MESSEGE = 'POST-MESSEGE';
+const UPDATE_POST_MESSEGE = 'UPDATE-POST-MESSEGE';
+
 const store = {
   _state: {
     users: [
@@ -32,7 +35,7 @@ const store = {
   },
   callSubscriber() {
   },
-  postMessege() {
+  _postMessege() {
     let myMesege = {
       messege: this._state.newMessege,
       id: 3
@@ -41,15 +44,24 @@ const store = {
     this._state.newMessege = '';
     this.callSubscriber(this._state);
   },
-  getCurrentTextMessege(newText) {
+  _getCurrentTextMessege(newText) {
     this._state.newMessege = newText;
     this.callSubscriber(this._state);
   },
   subscribe(observer) {
     this.callSubscriber = observer;
+  },
+  dispatch(action) {
+    if( action.type === POST_MESSEGE ) {
+      this._postMessege();
+    }else if (action.type === UPDATE_POST_MESSEGE) {
+      this._getCurrentTextMessege(action.newText)
+    }
   }
-}
+};
 
+export const actionMessegePostCreator = () => ({ type: 'POST-MESSEGE' });
+export const actionUpdatePostMessegeCreator = (text) => ({ type: 'UPDATE-POST-MESSEGE', newText: text });
 
 export default store;
 

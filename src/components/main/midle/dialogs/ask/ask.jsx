@@ -4,7 +4,7 @@ const Ask = props => {
     return (
         <div className={s.wrappperAsk}>
             <div className={s.ask}>
-                {props.ask}
+                {props.asks}
             </div>
         </div>
 

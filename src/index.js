@@ -1,5 +1,5 @@
 import reportWebVitals from "./reportWebVitals";
-import store from './redux/State';
+import store from "./redux/state";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.js";
@@ -7,7 +7,7 @@ import App from "./App.js";
 const rerenderEntireTree = () => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={store.getState()} postMessege={store.postMessege} getCurrentTextMessege={store.getCurrentTextMessege} />
+      <App state={store.getState()} dispatch={store.dispatch.bind(store)}/>
     </React.StrictMode>,
     document.getElementById("root")
   );
