@@ -1,4 +1,4 @@
-import { actionMessegePostCreator, actionUpdatePostMessegeCreator } from '../../../../redux/state.js'
+import { actionMessegePostCreator, actionUpdatePostMessegeCreator } from '../../../../redux/messege-reducer.js'
 import DialogItem from "./dialogItem/dialogItem";
 import Ask from './ask/ask.jsx';
 import Messege from "./messege/messege";

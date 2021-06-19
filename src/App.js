@@ -9,11 +9,11 @@ const App = props => {
       <div className="App">
         <Header />
         <Main dialog={ props.state.dialog }
-          messeges={ props.state.messeges }
+          messeges={ props.state.messeges.answer }
           users={ props.state.users }
           dispatch = { props.dispatch }
-          newMessege={ props.state.newMessege }
-          ask={ props.state.ask }
+          newMessege={ props.state.messeges.newMessege }
+          ask={ props.state.messeges.ask }
         />
       </div>
     </BrowserRouter>

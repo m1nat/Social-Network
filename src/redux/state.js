@@ -1,5 +1,4 @@
-const POST_MESSEGE = 'POST-MESSEGE';
-const UPDATE_POST_MESSEGE = 'UPDATE-POST-MESSEGE';
+import { putMesseges } from './messege-reducer.js'
 
 const store = {
   _state: {
@@ -11,7 +10,6 @@ const store = {
       { name: "Vladislav Sinkevich", position: "Driver" },
       { name: "Anastasia Sinkevich", position: "Baby" },
     ],
-    newMessege: '',
     dialog: [
       { name: "Vitaliy", id: 1 },
       { name: "Victoria", id: 2 },
@@ -20,48 +18,35 @@ const store = {
       { name: "Vladislav", id: 5 },
       { name: "Anastasia", id: 6 },
     ],
-    messeges: [
-      { messege: "Hi", id: 1 },
-      { messege: "How ure you?", id: 2 },
-      { messege: "I'm ok :)", id: 3 },
-    ],
-    ask: [
-      { messege: 'Hi! I\'m busy', id: 1 },
-      { messege: 'See you soon ;)', id: 2 }
-    ]
+    messeges: {
+      answer: [
+        { messege: "Hi", id: 1 },
+        { messege: "How ure you?", id: 2 },
+        { messege: "I'm ok :)", id: 3 },
+      ],
+      ask: [
+        { messege: 'Hi! I\'m busy', id: 1 },
+        { messege: 'See you soon ;)', id: 2 }
+      ],
+      newMessege: '',
+    }
   },
   getState() {
     return this._state
   },
   callSubscriber() {
   },
-  _postMessege() {
-    let myMesege = {
-      messege: this._state.newMessege,
-      id: 3
-    }
-    this._state.ask.push(myMesege);
-    this._state.newMessege = '';
-    this.callSubscriber(this._state);
-  },
-  _getCurrentTextMessege(newText) {
-    this._state.newMessege = newText;
-    this.callSubscriber(this._state);
-  },
   subscribe(observer) {
     this.callSubscriber = observer;
   },
   dispatch(action) {
-    if( action.type === POST_MESSEGE ) {
-      this._postMessege();
-    }else if (action.type === UPDATE_POST_MESSEGE) {
-      this._getCurrentTextMessege(action.newText)
-    }
+
+    putMesseges(this._state.messeges, action)
+
+    this.callSubscriber(this._state);
   }
 };
 
-export const actionMessegePostCreator = () => ({ type: 'POST-MESSEGE' });
-export const actionUpdatePostMessegeCreator = (text) => ({ type: 'UPDATE-POST-MESSEGE', newText: text });
 
 export default store;
 
