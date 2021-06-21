@@ -12,9 +12,9 @@ const Midle = props => {
       <div className={s.routeMessege}>
         <Route path="/dialogs" render={() => 
         <Dialogs
-          dialog={props.dialog}
-          messeges={props.messeges}
-          newMessege={props.newMessege} 
+          dialog={ props.dialog }
+          messeges={ props.messeges }
+          newMessege={ props.newMessege } 
           dispatch = { props.dispatch }
           ask={ props.ask }
           />} 
