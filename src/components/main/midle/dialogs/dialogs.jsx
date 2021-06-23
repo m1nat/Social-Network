@@ -1,11 +1,12 @@
 import { actionMessegePostCreator, actionUpdatePostMessegeCreator } from '../../../../redux/messege-reducer.js'
 import DialogItem from "./dialogItem/dialogItem";
+import DialogsContainer from './dialogsContainer.jsx';
 import Ask from './ask/ask.jsx';
 import Messege from "./messege/messege";
 import s from "./dialogs.module.scss";
 import React from "react";
 
-const Dialogs = props => {
+const Dialogs = (props) => {
 
   let dialogElements = props.dialog.map((el) => (
     <DialogItem name={ el.name } id={ el.id } />
@@ -22,12 +23,12 @@ const Dialogs = props => {
   const inputValue = React.createRef();
 
   const putMessege = () => {
-    props.dispatch(actionMessegePostCreator());
+    props.createNewMessege()
   };
 
   const putOnchange = () => {
     let text = inputValue.current.value;
-    props.dispatch(actionUpdatePostMessegeCreator(text));
+    props.updateCurrentText(text);
   };
 
   return (

@@ -4,10 +4,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.js";
 
-const rerenderEntireTree = () => {
+const rerenderEntireTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={store.getState()} dispatch={store.dispatch.bind(store)}/>
+      <App state={ state } dispatch={store.dispatch.bind(store)}/>
     </React.StrictMode>,
     document.getElementById("root")
   );
@@ -19,4 +19,7 @@ rerenderEntireTree(store.getState())
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-store.subscribe(rerenderEntireTree);
+store.subscribe( () => {
+  let state = store.getState()
+  rerenderEntireTree(state)
+});
