@@ -8,14 +8,7 @@ const App = props => {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Main 
-          dialog={ props.state.users.usersDialog }
-          messeges={ props.state.messeges.answer }
-          users={ props.state.users.userInfo }
-          dispatch = { props.dispatch }
-          newMessege={ props.state.messeges.newMessege }
-          ask={ props.state.messeges.ask }
-        />
+        <Main />
       </div>
     </BrowserRouter>
   );

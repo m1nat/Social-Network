@@ -1,4 +1,3 @@
- 
 const initialArrayOfUsers = {
   userInfo: [
     { name: "Vitaliy Saskevich", position: "Engeener" },
@@ -16,11 +15,11 @@ const initialArrayOfUsers = {
     { name: "Vladislav", id: 5 },
     { name: "Anastasia", id: 6 },
   ],
-}; 
+};
 
 const arrayOfUsers = (state = initialArrayOfUsers, action) => {
 
   return state
-} 
+}
 
 export default arrayOfUsers;

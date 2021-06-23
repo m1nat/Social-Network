@@ -1,9 +1,11 @@
-import AsideBottom from "./asideBottom";
+import { connect } from "react-redux";
+import { AsideBottom } from './asideBottom.jsx'
 
-const AsideBottomContainer = props => {
-  return (
-    <AsideBottom users={props.users} />
-  );
+let mapStateToProps = (state) => {
+  return {
+    users: state.users.userInfo
+  }
 };
 
-export default AsideBottomContainer;
+export const AsideBottomContainer = connect(mapStateToProps)(AsideBottom);
+

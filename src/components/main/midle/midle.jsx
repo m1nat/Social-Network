@@ -10,15 +10,7 @@ const Midle = props => {
     <div className={s.midle}>
       <HeaderOfMidle />
       <div className={s.routeMessege}>
-        <Route path="/dialogs" render={() => 
-        <DialogsContainer
-          dialog={ props.dialog }
-          messeges={ props.messeges }
-          newMessege={ props.newMessege } 
-          dispatch = { props.dispatch }
-          ask={ props.ask }
-          />} 
-        />
+        <Route path="/dialogs" render={() => <DialogsContainer />} />
         <Route path="/news" render={() => <News />} />
       </div>
       <TopUser />

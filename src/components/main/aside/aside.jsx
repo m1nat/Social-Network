@@ -1,12 +1,12 @@
 import s from './aside.module.scss';
 import AsideTop from './asideTop/asideTop';
-import AsideBottomContainer from './asideBottom/asideBottom'
+import {AsideBottomContainer} from './asideBottom/asideBottomContainer'
 
-const Aside = props => {
+const Aside = () => {
   return (
     <div className={s.aside}>
       <AsideTop />
-      <AsideBottomContainer users={props.users} />
+      <AsideBottomContainer />
     </div>
   )
 };

@@ -1,30 +1,28 @@
+import { connect } from 'react-redux';
 import { actionMessegePostCreator, actionUpdatePostMessegeCreator } from '../../../../redux/messege-reducer.js'
-import React from "react";
 import Dialogs from './dialogs.jsx';
 
-const DialogsContainer = props => {
 
-  const inputValue = React.createRef();
+const mapStateToProps = (state) => {
+  return {
+    dialog: state.users.usersDialog,
+    messeges: state.messeges.answer,
+    ask: state.messeges.ask,
+    newMessege: state.messeges.newMessege
+  }
+};
 
-  const putMessege = () => {
-    props.dispatch(actionMessegePostCreator());
-  };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createNewMessege: () => {
+      dispatch(actionMessegePostCreator())
+    },
+    updateCurrentText: (text) => {
+      dispatch(actionUpdatePostMessegeCreator(text))
+    },
+  }
+};
 
-  const putOnchange = (text) => {
-    props.dispatch(actionUpdatePostMessegeCreator(text));
-  };
-
-  return (
-    <Dialogs 
-    updateCurrentText={ putOnchange } 
-    createNewMessege={ putMessege } 
-    dialog={props.dialog} 
-    messeges={props.messeges}
-    ask={props.ask}
-    newMessege={ props.newMessege }
-    />
-    
-  );
-}
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs)
 
 export default DialogsContainer;
