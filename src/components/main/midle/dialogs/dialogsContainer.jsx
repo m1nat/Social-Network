@@ -21,6 +21,7 @@ const DialogsContainer = props => {
     dialog={props.dialog} 
     messeges={props.messeges}
     ask={props.ask}
+    newMessege={ props.newMessege }
     />
     
   );
