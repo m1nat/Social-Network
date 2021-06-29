@@ -1,9 +1,9 @@
+import { Route } from "react-router";
 import HeaderOfMidle from "./headerofmidle/headerofmidle";
 import News from "./news/news";
 import TopUser from "./topuser/topuser";
 import DialogsContainer from "./dialogs/dialogsContainer";
 import s from "./midle.module.scss";
-import { Route } from "react-router";
 
 const Midle = props => {
   return (

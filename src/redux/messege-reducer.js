@@ -16,24 +16,30 @@ const initialState = {
 
 const putMesseges = (state = initialState, action) => {
   switch (action.type) {
-    case POST_MESSEGE:
+    case POST_MESSEGE: {
       let myMesege = {
         messege: state.newMessege,
         id: 3
       }
-      state.ask.push(myMesege);
-      state.newMessege = '';
-      return state
+      let copyState = { ...state };
+      copyState.messeges = { ...state.messeges }
+      copyState.messeges.ask = { ...state.messeges.ask }
+      copyState.ask.push(myMesege);
+      copyState.newMessege = '';
+      return copyState
+    }
       break;
-    case UPDATE_POST_MESSEGE:
-      state.newMessege = action.newText;
-      return state
+    case UPDATE_POST_MESSEGE: {
+      let copyState = { ...state };
+      copyState.messeges = { ...state.messeges }
+      copyState.newMessege = action.newText;
+      return copyState
+    }
     default:
       return state
       break;
   }
 };
-
 
 export default putMesseges;
 export const actionMessegePostCreator = () => ({ type: 'POST-MESSEGE' });
