@@ -1,0 +1,8 @@
+.userAvatar {
+  width: 25%;
+  height: 90%;
+
+  @media screen and(max-width:1500px) {
+    padding: 5px; 
+  }
+}

@@ -17,19 +17,18 @@ const initialState = {
 const putMesseges = (state = initialState, action) => {
 
   let stateCopy;
-
   switch (action.type) {
-    case POST_MESSEGE: 
+    case POST_MESSEGE:
       let newTexts = state.newMessege
-      console.log(state.newMessege);
       return stateCopy = {
         ...state,
-        ask: [...state.ask, {messege: newTexts, id: 3}]
+        ask: [...state.ask, { messege: newTexts, id: 3 }],
+        newMessege: ''
       }
       break;
-    case UPDATE_POST_MESSEGE: 
+    case UPDATE_POST_MESSEGE:
       return stateCopy = {
-        ...state, 
+        ...state,
         newMessege: action.newText
       }
     default:

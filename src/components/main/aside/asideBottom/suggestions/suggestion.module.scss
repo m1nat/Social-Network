@@ -12,6 +12,10 @@
     font-size: 1.2em;
     font-weight: bolder;
     
+    a {
+      text-decoration: none;
+    }
+    
     @media screen and(max-width: 1500px) {
         margin: 10px;
         letter-spacing: 1px;

@@ -1,0 +1,38 @@
+.wrapper {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .suggestonUsers {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(228, 226, 226);
+
+    @media screen and(max-width: 1500px) {
+      height: 550px;
+    }
+
+  }
+  .showMore {
+    width: 30%;
+    height: 30px;
+    background-color: rgb(230, 67, 67);
+    text-align: center;
+    color: white;
+    padding-top: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    @media screen and(max-width: 1500px) {
+      width: 27%;
+      height: 23px;
+      padding-top: 2px;
+    }
+  }
+
+}
