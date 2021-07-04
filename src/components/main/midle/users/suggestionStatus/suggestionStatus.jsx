@@ -1,14 +1,14 @@
-import SuggestionStatusItem from './suggestionStatusItem/suggestionStatusItem';
+import SuggestionStatusItemConstaner from './suggestionStatusItem/suggestionStatusItem';
 import s from './suggestionStatus.module.scss';
 
 const SuggestionStatus = () => {
   return (
     <div className={s.suggestionStatus}>
-      <SuggestionStatusItem />
-      <SuggestionStatusItem />
-      <SuggestionStatusItem />
-      <SuggestionStatusItem />
-      <SuggestionStatusItem />
+      <SuggestionStatusItemConstaner />
+      <SuggestionStatusItemConstaner />
+      <SuggestionStatusItemConstaner />
+      <SuggestionStatusItemConstaner />
+      <SuggestionStatusItemConstaner /> 
     </div>
   )
 };
