@@ -2,23 +2,15 @@ const ADD_FRIEND = 'ADD_FRIEND';
 const REMOVE_FRIEND = 'REMOVE_FRIEND';
 const SET_USERS = 'SET_USERS';
 
-initialState = {
-  suggestions: {
-    usersAvatar: [{}],
-    usersSubcrip: [
-      { id: 1, fullname: 'Vitaliy', subscrip: false },
-      { id: 2, fullname: 'Victoria', subscrip: true },
-      { id: 3, fullname: 'Anastasia', subscrip: false },
-      { id: 4, fullname: 'Vladislav', subscrip: true },
-      { id: 5, fullname: 'Dmitry', subscrip: true }],
-    userStatus: [
-      { job: 'development', status: 'in vocation', location: { country: 'Belarus', city: 'Gomel' } },
-      { job: 'doctor', status: 'active', location: { country: 'Belarus', city: 'Gomel' } },
-      { job: 'none', status: 'busy', location: { country: 'Belarus', city: 'Gomel' } },
-      { job: 'driver', status: 'don\'t tuch me', location: { country: 'Belarus', city: 'Minsk' } },
-      { job: 'none', status: 'active', location: { country: 'Belarus', city: 'Grodno' } },
-      { job: 'builder', status: 'in vocation', location: { country: 'Belarus', city: 'Mogilev' } }]
-  }
+const initialState = {
+  usersAvatar: [],
+  usersName: [
+    { id: 1, fullname: 'Vitaliy Sinkevich', subscrip: false, status: 'in vocation', job: 'development', country: 'Germany', city: 'Hanover' },
+    { id: 2, fullname: 'Victoria Sinkevich', subscrip: true, status: 'in vocation', job: 'doctor', country: 'Germany', city: 'Hanover' },
+    { id: 3, fullname: 'Anastasia Sinkevich', subscrip: false, status: 'busy', job: 'none', country: 'Germany', city: 'Hanover' },
+    { id: 4, fullname: 'Vladislav Neyronskyi', subscrip: true, status: 'don\'t tuch me', job: 'driver', country: 'Belarus', city: 'Minsk' },
+    { id: 5, fullname: 'Dmitry Soldatenko', subscrip: true, status: 'in vocation', job: 'builder', country: 'Belarus', city: 'Mogilev' }
+  ],
 };
 
 const showUsers = (state = initialState, action) => {
@@ -27,7 +19,7 @@ const showUsers = (state = initialState, action) => {
     case ADD_FRIEND:
       return {
         ...state,
-        usersSubcrip: state.usersSubcrip.map(user => {
+        usersName: state.usersName.map(user => {
           if (user.id === action.userID) {
             return { ...user, subscrip: true }
           }
@@ -38,8 +30,8 @@ const showUsers = (state = initialState, action) => {
     case REMOVE_FRIEND:
       return {
         ...state,
-        users: state.usersSubcrip.map(user => {
-          if (user.id === active.userID) {
+        usersName: state.usersName.map(user => {
+          if (user.id === action.userID) {
             return { ...user, subscrip: false }
           }
           return user
@@ -47,7 +39,7 @@ const showUsers = (state = initialState, action) => {
       }
       break;
     case SET_USERS:
-      return { ...state, userName: [...state.usersSubcrip, ...usersSubcrip] };
+      // return { ...state, usersName: [...state.usersName, ...usersName] };
       break;
 
     default:

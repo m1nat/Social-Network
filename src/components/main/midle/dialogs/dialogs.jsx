@@ -8,15 +8,15 @@ import React from "react";
 const Dialogs = (props) => {
 
   let dialogElements = props.dialog.map((el) => (
-    <DialogItem name={el.name} id={el.id} key={el.id}/>
+    <DialogItem name={ el.name } id={ el.id } key={ el.id }/>
   ));
 
   let answer = props.messeges.map(answer => (
-    <Messege name={answer.messege} id={answer.id} key={answer.id}/>
+    <Messege name={ answer.messege } id={ answer.id } key={ answer.id }/>
   ));
 
   let postAsk = props.ask.map(el => (
-    <Ask asks={el.messege} />
+    <Ask asks={ el.messege } />
   ));
 
   const inputValue = React.createRef();

@@ -1,13 +1,24 @@
-.avatars {
-  width: 85px;
-  height: 85px;
-  margin: 20px auto;
-  border-radius: 50px;
-  background-color: white;
+.wrapper {
+  .avatars {
+    width: 85px;
+    height: 85px;
+    margin: 20px auto;
+    border-radius: 50px;
+    background-color: white;
 
-  @media screen and(max-width: 1500px) {
-    width: 80px;
-    height: 80px;
-    margin: 25px auto;
+    @media screen and(max-width: 1500px) {
+      width: 80px;
+      height: 80px;
+      margin: 25px auto;
+    }
+
+    .btn {
+      width: 100%;
+      height: 100%;
+
+      button {
+        margin-left: 40%;
+      }
+    }
   }
 }
